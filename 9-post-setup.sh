@@ -15,7 +15,7 @@ echo "FINAL SETUP AND CONFIGURATION"
 echo
 echo "Genaerating .xinitrc file"
 
-# Generate the .xinitrc file so we can launch Awesome from the
+# Generate the .xinitrc file so we can launch Awesomevfrom the
 # terminal using the "startx" command
 cat <<EOF > ${HOME}/.xinitrc
 #!/bin/bash
@@ -125,6 +125,8 @@ sudo systemctl enable ntpd.service
 sudo systemctl start ntpd.service
 sudo systemctl disable dhcpcd.service
 sudo systemctl stop dhcpcd.service
+sudo systemctl disable ssh.service
+sudo systemctl stop ssh.service
 sudo systemctl enable NetworkManager.service
 sudo systemctl start NetworkManager.service
 echo "
