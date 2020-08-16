@@ -42,34 +42,10 @@ PKGS=(
     'vim'                   # Terminal Editor
     'zenity'                # Display graphical dialog boxes via shell scripts
     'zip'                   # Zip compression program
-    'zsh'                   # ZSH shell
-    'zsh-completions'       # Tab completion for ZSH
-
-    # DISK UTILITIES ------------------------------------------------------
-
-    'autofs'                # Auto-mounter
-    'btrfs-progs'           # BTRFS Support
-    'dosfstools'            # DOS Support
-    'exfat-utils'           # Mount exFat drives
-    'gparted'               # Disk utility
-    'gvfs-mtp'              # Read MTP Connected Systems
-    'gvfs-smb'              # More File System Stuff
-    'nautilus-share'        # File Sharing in Nautilus
-    'ntfs-3g'               # Open source implementation of NTFS file system
-    'parted'                # Disk utility
-    'samba'                 # Samba File Sharing
-    'smartmontools'         # Disk Monitoring
-    'smbclient'             # SMB Connection 
-    'xfsprogs'              # XFS Support
 
     # GENERAL UTILITIES ---------------------------------------------------
 
-    'flameshot'             # Screenshots
-    'freerdp'               # RDP Connections
-    'libvncserver'          # VNC Connections
     'nautilus'              # Filesystem browser
-    'remmina'               # Remote Connection
-    'veracrypt'             # Disc encryption utility
     'variety'               # Wallpaper changer
 
     # DEVELOPMENT ---------------------------------------------------------
