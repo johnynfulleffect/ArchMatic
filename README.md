@@ -1,7 +1,5 @@
 # Bateman ArchMatic Installer Script
 
-<img src="https://i.imgur.com/Yn29sze.png" />
-
 This README contains the steps I do to install and configure a fully-functional Arch Linux installation containing a desktop environment, all the support packages (network, bluetooth, audio, etc.), along with all my preferred applications and utilities. The shell scripts in this repo allow the entire process to be automated.)
 
 ---
@@ -9,6 +7,7 @@ This README contains the steps I do to install and configure a fully-functional 
 ## Setup Boot and Arch ISO on USB key
 
 TODO: steps to do this
+
 First, setup the boot USB, boot arch live iso, and run the `preinstall.sh` from terminal. 
 
 ### Arch Live ISO (Pre-Install)
