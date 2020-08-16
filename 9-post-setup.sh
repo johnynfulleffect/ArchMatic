@@ -15,7 +15,7 @@ echo "FINAL SETUP AND CONFIGURATION"
 echo
 echo "Genaerating .xinitrc file"
 
-# Generate the .xinitrc file so we can launch Awesomevfrom the
+# Generate the .xinitrc file so we can launch Awesome from the
 # terminal using the "startx" command
 cat <<EOF > ${HOME}/.xinitrc
 #!/bin/bash
