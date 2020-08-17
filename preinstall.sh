@@ -69,7 +69,7 @@ arch-chroot /mnt
 echo "--------------------------------------"
 echo "-- Bootloader Systemd Installation  --"
 echo "--------------------------------------"
-bootctl install
+bootctl install --esp-path /mnt/boot
 cat <<EOF > /boot/loader/entries/arch.conf
 title Arch Linux  
 linux /vmlinuz-linux  
