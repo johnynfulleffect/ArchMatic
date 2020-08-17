@@ -62,8 +62,8 @@ mount -t vfat "${DISK}p1" /mnt/boot/
 echo "--------------------------------------"
 echo "-- Arch Install on Main Drive       --"
 echo "--------------------------------------"
-genfstab -U /mnt >> /mnt/etc/fstab
 pacstrap /mnt base base-devel linux linux-firmware --noconfirm --needed
+genfstab -U /mnt >> /mnt/etc/fstab
 
 echo "--------------------------------------"
 echo "-- Bootloader Systemd Installation  --"
