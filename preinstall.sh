@@ -18,7 +18,7 @@ curl -s "https://www.archlinux.org/mirrorlist/?country=US&protocol=https&use_mir
 
 
 echo -e "\nInstalling prereqs...\n$HR"
-pacman -S --noconfirm gptfdisk btrfs-progs
+pacman -S --noconfirm gptfdisk
 
 echo "-------------------------------------------------"
 echo "-------select your disk to format----------------"
