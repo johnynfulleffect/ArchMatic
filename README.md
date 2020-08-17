@@ -6,8 +6,6 @@ This README contains the steps I do to install and configure a fully-functional 
 
 ## Setup Boot and Arch ISO on USB key
 
-TODO: steps to do this
-
 First, setup the boot USB, boot arch live iso, and run the `preinstall.sh` from terminal. 
 
 ### Arch Live ISO (Pre-Install)
@@ -15,7 +13,7 @@ First, setup the boot USB, boot arch live iso, and run the `preinstall.sh` from 
 This step installs arch to your hard drive. *IT WILL FORMAT THE DISK*
 
 ```bash
-wget https://raw.githubusercontent.com/johnynfulleffect/ArchMatic/master/preinstall.sh
+curl https://raw.githubusercontent.com/johnynfulleffect/ArchMatic/master/preinstall.sh -o preinstall.sh
 sh preinstall.sh
 reboot
 ```
