@@ -49,15 +49,15 @@ sgdisk -c 2:"ROOT" ${DISK}
 # make filesystems
 echo -e "\nCreating Filesystems...\n$HR"
 
-mkfs.vfat -F32 -n "UEFISYS" "${DISK}1"
-mkfs.ext4 -L "ROOT" "${DISK}2"
+mkfs.vfat -F32 -n "UEFISYS" "${DISK}p1"
+mkfs.ext4 -L "ROOT" "${DISK}p2"
 
 # mount target
 mkdir /mnt
-mount -t ext4 "${DISK}2" /mnt
+mount -t ext4 "${DISK}p2" /mnt
 mkdir /mnt/boot
 mkdir /mnt/boot/efi
-mount -t vfat "${DISK}1" /mnt/boot/
+mount -t vfat "${DISK}p1" /mnt/boot/
 
 echo "--------------------------------------"
 echo "-- Arch Install on Main Drive       --"
@@ -74,7 +74,7 @@ cat <<EOF > /boot/loader/entries/arch.conf
 title Arch Linux  
 linux /vmlinuz-linux  
 initrd  /initramfs-linux.img  
-options root=${DISK}1 rw
+options root=${DISK}p1 rw
 EOF
 
 exit
