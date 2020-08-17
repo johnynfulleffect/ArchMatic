@@ -73,7 +73,7 @@ cat <<EOF > /mnt/boot/loader/entries/arch.conf
 title Arch Linux
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
-options root=${DISK}p1 rw
+options root=${DISK}p2 rw
 EOF
 
 umount -R /mnt
