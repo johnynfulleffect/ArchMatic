@@ -64,12 +64,11 @@ echo "-- Arch Install on Main Drive       --"
 echo "--------------------------------------"
 pacstrap /mnt base linux linux-firmware --noconfirm --needed
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
 
 echo "--------------------------------------"
 echo "-- Bootloader Systemd Installation  --"
 echo "--------------------------------------"
-bootctl install
+bootctl install --esp-path /mnt/boot
 cat <<EOF > /boot/loader/entries/arch.conf
 title Arch Linux  
 linux /vmlinuz-linux  
@@ -77,7 +76,6 @@ initrd  /initramfs-linux.img
 options root=${DISK}1 rw
 EOF
 
-exit
 umount -R /mnt
 
 echo "--------------------------------------"
