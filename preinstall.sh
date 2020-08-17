@@ -70,10 +70,10 @@ echo "-- Bootloader Systemd Installation  --"
 echo "--------------------------------------"
 bootctl install --esp-path /mnt/boot
 cat <<EOF > /mnt/boot/loader/entries/arch.conf
-title Arch Linux  
-linux /vmlinuz-linux  
-initrd  /initramfs-linux.img  
-options root=${DISK}1 rw
+title Arch Linux
+linux /vmlinuz-linux
+initrd /initramfs-linux.img
+options root=${DISK}p1 rw
 EOF
 
 umount -R /mnt
