@@ -70,6 +70,17 @@ pacstrap /mnt linux linux-firmware --noconfirm --needed
 # amd microcode and drivers
 pacstrap /mnt amd-ucode xorg xorg-drivers --noconfirm --needed
 
+echo "--------------------------------------"
+echo "-- Setup                            --"
+echo "--------------------------------------"
+
+echo "Please enter root password:"
+
+password
+
+pacman -S networkmanager --noconfirm --needed
+systemctl enable NetworkManager
+
 # fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 
