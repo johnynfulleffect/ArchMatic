@@ -65,10 +65,10 @@ echo "--------------------------------------"
 pacstrap /mnt base base-devel --noconfirm --needed
 
 # kernel
-pacman /mnt linux linux-firmware --noconfirm --needed
+pacstrap /mnt linux linux-firmware --noconfirm --needed
 
 # amd microcode
-pacman /mnt amd-ucode --noconfirm --needed
+pacstrap /mnt amd-ucode --noconfirm --needed
 
 # fstab
 genfstab -U /mnt >> /mnt/etc/fstab
