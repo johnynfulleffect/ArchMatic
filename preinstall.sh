@@ -64,7 +64,7 @@ echo "-- Arch Install on Main Drive       --"
 echo "--------------------------------------"
 pacstrap /mnt base base-devel --noconfirm --needed
 
-# kernal
+# kernel
 pacman /mnt linux linux-firmware --noconfirm --needed
 
 # amd microcode
