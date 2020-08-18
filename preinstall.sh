@@ -67,8 +67,8 @@ pacstrap /mnt base base-devel --noconfirm --needed
 # kernel
 pacstrap /mnt linux linux-firmware --noconfirm --needed
 
-# amd microcode
-pacstrap /mnt amd-ucode --noconfirm --needed
+# amd microcode and drivers
+pacstrap /mnt amd-ucode xorg xorg-drivers --noconfirm --needed
 
 # fstab
 genfstab -U /mnt >> /mnt/etc/fstab
