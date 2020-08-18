@@ -62,7 +62,15 @@ mount -t vfat "${DISK}p1" /mnt/boot/
 echo "--------------------------------------"
 echo "-- Arch Install on Main Drive       --"
 echo "--------------------------------------"
-pacstrap /mnt base base-devel linux linux-firmware --noconfirm --needed
+pacstrap /mnt base base-devel --noconfirm --needed
+
+# kernal
+pacman /mnt linux linux-firmware --noconfirm --needed
+
+# amd microcode
+pacman /mnt amd-ucode --noconfirm --needed
+
+# fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 
 echo "--------------------------------------"
@@ -72,6 +80,7 @@ bootctl install --esp-path /mnt/boot
 cat <<EOF > /mnt/boot/loader/entries/arch.conf
 title Arch Linux
 linux /vmlinuz-linux
+initrd /cpu_amd-ucode.img
 initrd /initramfs-linux.img
 options root=${DISK}p2 rw
 EOF
