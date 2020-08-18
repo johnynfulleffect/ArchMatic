@@ -67,19 +67,14 @@ pacstrap /mnt base base-devel --noconfirm --needed
 # kernel
 pacstrap /mnt linux linux-firmware --noconfirm --needed
 
-# amd microcode and drivers
-pacstrap /mnt amd-ucode xorg xorg-drivers --noconfirm --needed
-
 echo "--------------------------------------"
 echo "-- Setup                            --"
 echo "--------------------------------------"
 
-echo "Please enter root password:"
+# amd microcode and drivers
+pacstrap /mnt amd-ucode xorg xorg-drivers --noconfirm --needed
 
-password
-
-pacman -S networkmanager --noconfirm --needed
-systemctl enable NetworkManager
+pacstrap /mnt networkmanager --noconfirm --needed
 
 # fstab
 genfstab -U /mnt >> /mnt/etc/fstab
