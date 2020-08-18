@@ -8,34 +8,31 @@
 #-------------------------------------------------------------------------
 
 
-	echo "Please enter hostname:"
-	read hostname
+echo "Please enter hostname:"
+read hostname
 
-	echo "Please enter username:"
-	read username
+echo "Please enter username:"
+read username
 
-	echo "Please enter password:"
-	read -s password
+echo "Please enter password:"
+read -s password
 
-	echo "Please repeat password:"
-	read -s password2
+echo "Please repeat password:"
+read -s password2
 
-	# Check both passwords match
-	if [ "$password" != "$password2" ]; then
-	    echo "Passwords do not match"
-	    exit 1
-	fi
-  printf "hostname="$hostname"\n" >> "install.conf"
-  printf "username="$username"\n" >> "install.conf"
-  printf "password="$password"\n" >> "install.conf"
-
+# Check both passwords match
+if [ "$password" != "$password2" ]; then
+    echo "Passwords do not match"
+    exit 1
+fi
 
 echo "-------------------------------------------------"
 echo "Setting up mirrors for optimal download - US Only"
 echo "-------------------------------------------------"
+pacman -Syyy
 pacman -S --noconfirm pacman-contrib curl
 mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-curl -s "https://www.archlinux.org/mirrorlist/?country=US&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' > /etc/pacman.d/mirrorlist
+curl -s "https://www.archlinux.org/mirrorlist/?country=US&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > /etc/pacman.d/mirrorlist
 
 nc=$(grep -c ^processor /proc/cpuinfo)
 echo "You have " $nc" cores."
