@@ -80,7 +80,7 @@ bootctl install --esp-path /mnt/boot
 cat <<EOF > /mnt/boot/loader/entries/arch.conf
 title Arch Linux
 linux /vmlinuz-linux
-initrd /cpu_amd-ucode.img
+initrd /amd-ucode.img
 initrd /initramfs-linux.img
 options root=${DISK}p2 rw
 EOF
