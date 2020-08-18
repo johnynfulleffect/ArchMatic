@@ -11,11 +11,10 @@ echo "-------------------------------------------------"
 echo "Setting up mirrors for optimal download - US Only"
 echo "-------------------------------------------------"
 timedatectl set-ntp true
-pacman -S --noconfirm pacman-contrib
-mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-curl -s "https://www.archlinux.org/mirrorlist/?country=US&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' > /etc/pacman.d/mirrorlist
-
 pacman -Syyy
+pacman -S pacman-contrib --noconfirm
+mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+curl -s "https://www.archlinux.org/mirrorlist/?country=US&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > /etc/pacman.d/mirrorlist
 
 echo -e "\nInstalling prereqs...\n$HR"
 pacman -S --noconfirm gptfdisk
@@ -68,7 +67,7 @@ pacstrap /mnt base base-devel --noconfirm --needed
 pacstrap /mnt linux linux-firmware --noconfirm --needed
 
 echo "--------------------------------------"
-echo "-- Setup                            --"
+echo "-- Setup Dependencies               --"
 echo "--------------------------------------"
 
 # amd microcode and drivers
@@ -90,6 +89,15 @@ initrd /amd-ucode.img
 initrd /initramfs-linux.img
 options root=${DISK}p2 rw
 EOF
+
+arch-chroot /mnt
+
+systemctl enable NetworkManager
+
+useradd -m --groups users,wheel john
+passwd
+
+exit
 
 umount -R /mnt
 
