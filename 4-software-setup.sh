@@ -12,7 +12,6 @@ echo "Setting up software                              "
 echo "-------------------------------------------------"
 
 # Configure awesome-wm
-su john
 git clone https://github.com/ChrisTitusTech/material-awesome.git ~/.config/awesome
 
 sed -i 's/^gtk-theme-name=Adwaita/gtk-theme-name=Materia-dark/' ~/.icons/default/index.theme
