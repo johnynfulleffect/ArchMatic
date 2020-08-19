@@ -42,6 +42,7 @@ PKGS=(
     'vim'                   # Terminal Editor
     'zenity'                # Display graphical dialog boxes via shell scripts
     'zip'                   # Zip compression program
+    'zsh'                   # Interactive shell
 
     # GENERAL UTILITIES ---------------------------------------------------
 
