@@ -11,21 +11,6 @@
 echo "Please enter hostname:"
 read hostname
 
-echo "Please enter username:"
-read username
-
-echo "Please enter password:"
-read -s password
-
-echo "Please repeat password:"
-read -s password2
-
-# Check both passwords match
-if [ "$password" != "$password2" ]; then
-    echo "Passwords do not match"
-    exit 1
-fi
-
 echo "-------------------------------------------------"
 echo "Setting up mirrors for optimal download - US Only"
 echo "-------------------------------------------------"
