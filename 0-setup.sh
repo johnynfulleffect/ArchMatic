@@ -50,3 +50,4 @@ sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /et
 # Change default shell
 su $username
 chsh -s $(which zsh)
+su
