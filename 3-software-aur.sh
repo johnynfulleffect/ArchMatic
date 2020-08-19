@@ -14,7 +14,6 @@ echo
 echo "Please enter username:"
 read username
 
-su $username
 cd "${HOME}"
 
 echo "CLONING: YAY"
