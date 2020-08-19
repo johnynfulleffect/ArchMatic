@@ -70,9 +70,6 @@ echo "--------------------------------------"
 echo "-- Setup Dependencies               --"
 echo "--------------------------------------"
 
-# drivers
-pacstrap /mnt xorg xorg-drivers --noconfirm --needed
-
 pacstrap /mnt networkmanager --noconfirm --needed
 
 # fstab
