@@ -14,6 +14,7 @@ echo
 echo "Please enter username:"
 read username
 
+su $username
 cd "${HOME}"
 
 echo "CLONING: YAY"
@@ -37,8 +38,6 @@ PKGS=(
     'materia-gtk-theme'             # Desktop Theme
     'papirus-icon-theme'            # Desktop Icons
 )
-
-su $username
 
 cd ${HOME}/yay
 makepkg -si
