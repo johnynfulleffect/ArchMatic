@@ -11,9 +11,12 @@ echo
 echo "INSTALLING AUR SOFTWARE"
 echo
 
+echo "Please enter username:"
+read username
+
 cd "${HOME}"
 
-echo "CLOING: YAY"
+echo "CLONING: YAY"
 git clone "https://aur.archlinux.org/yay.git"
 
 
@@ -38,6 +41,10 @@ PKGS=(
 
 cd ${HOME}/yay
 makepkg -si
+
+# Change default shell
+su $username
+chsh -s $(which zsh)
 
 for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG
