@@ -36,8 +36,8 @@ sh 1-base.sh
 sh 2-software-pacman.sh
 su john
 sh 3-software-aur.sh
-su
 sh 4-software-setup.sh
+su
 sh 9-post-setup.sh
 ```
 
