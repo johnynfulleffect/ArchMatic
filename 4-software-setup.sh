@@ -7,6 +7,8 @@
 #  Arch Linux Post Install Setup and Config
 #-------------------------------------------------------------------------
 
+echo "Please enter username:"
+read username
 
 echo "-------------------------------------------------"
 echo "Setting up software                              "
@@ -21,3 +23,7 @@ sed -i 's/^gtk-icon-theme-name=Adwaita/gtk-icon-theme-name=Papirus-Dark/' ~/.ico
 
 # Configure zsh
 
+
+# Change default shell
+su $username
+chsh -s $(which zsh)
