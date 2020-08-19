@@ -38,12 +38,12 @@ PKGS=(
     'papirus-icon-theme'            # Desktop Icons
 )
 
+su $username
 
 cd ${HOME}/yay
 makepkg -si
 
 # Change default shell
-su $username
 chsh -s $(which zsh)
 
 for PKG in "${PKGS[@]}"; do
