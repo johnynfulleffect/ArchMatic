@@ -70,8 +70,8 @@ echo "--------------------------------------"
 echo "-- Setup Dependencies               --"
 echo "--------------------------------------"
 
-# amd microcode and drivers
-pacstrap /mnt amd-ucode xorg xorg-drivers --noconfirm --needed
+# drivers
+pacstrap /mnt xorg xorg-drivers --noconfirm --needed
 
 pacstrap /mnt networkmanager --noconfirm --needed
 
@@ -85,7 +85,6 @@ bootctl install --esp-path /mnt/boot
 cat <<EOF > /mnt/boot/loader/entries/arch.conf
 title Arch Linux
 linux /vmlinuz-linux
-initrd /amd-ucode.img
 initrd /initramfs-linux.img
 options root=${DISK}p2 rw
 EOF
