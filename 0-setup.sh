@@ -10,9 +10,6 @@
 echo "Please enter hostname:"
 read hostname
 
-echo "Please enter user:"
-read username
-
 echo "-------------------------------------------------"
 echo "Setting up mirrors for optimal download - US Only"
 echo "-------------------------------------------------"
@@ -46,8 +43,3 @@ hostnamectl --no-ask-password set-hostname $hostname
 
 # Add sudo no password rights
 sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
-
-# Change default shell
-su $username
-chsh -s $(which zsh)
-su
