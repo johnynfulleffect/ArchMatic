@@ -1,4 +1,4 @@
-# Bateman ArchMatic Installer Script
+# ArchMatic Installer Script
 
 This README contains the steps I do to install and configure a fully-functional Arch Linux installation containing a desktop environment, all the support packages (network, bluetooth, audio, etc.), along with all my preferred applications and utilities. The shell scripts in this repo allow the entire process to be automated.)
 
@@ -16,8 +16,8 @@ This step installs arch to your hard drive. *IT WILL FORMAT THE DISK*
 curl https://raw.githubusercontent.com/johnynfulleffect/ArchMatic/master/preinstall.sh -o preinstall.sh
 sh preinstall.sh
 
-useradd -m --groups users,wheel john
-echo "john:password" | chpasswd
+useradd -m --groups users,wheel username
+echo "username:password" | chpasswd
 passwd
 systemctl enable NetworkManager
 exit
@@ -35,7 +35,7 @@ cd ArchMatic
 sh 0-setup.sh
 sh 1-base.sh
 sh 2-software-pacman.sh
-su john
+su username
 sh 3-software-aur.sh
 su
 sh 9-post-setup.sh
@@ -51,16 +51,3 @@ I also install the LTS Kernel along side the rolling one, and configure my bootl
 ### Troubleshooting Arch Linux
 
 __[Arch Linux Installation Gude](https://github.com/rickellis/Arch-Linux-Install-Guide)__
-
-#### No Wifi
-
-```bash
-sudo wifi-menu`
-```
-
-#### Initialize Xorg:
-At the terminal, run:
-
-```bash
-xinit
-```
