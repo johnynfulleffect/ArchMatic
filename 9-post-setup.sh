@@ -114,6 +114,11 @@ echo
 echo "Enabling bluetooth daemon and setting it to auto-start"
 
 sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
+
+# Fix bluetooth on Bose QC 35 - https://gist.github.com/andrealmar/f509bf56fea4af285f34ab3c12a58ce9
+sudo btmgmt ssp of
+sudo gpasswd -a john lp
+
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 
