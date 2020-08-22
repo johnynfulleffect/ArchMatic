@@ -38,6 +38,7 @@ sh 2-software-pacman.sh
 su username
 sh 3-software-aur.sh
 su
+sh 4-secure-system.sh
 sh 9-post-setup.sh
 ```
 
