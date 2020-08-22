@@ -45,6 +45,8 @@ PKGS=(
         'network-manager-applet'    # System tray icon/utility for network connectivity
         'dhclient'                  # DHCP client
         'libsecret'                 # Library for storing passwords
+        'fail2ban'                  # Ban IP's after man failed login attempts
+        'ufw'                       # Uncomplicated firewall
     
     # --- Audio
         'alsa-utils'        # Advanced Linux Sound Architecture (ALSA) Components https://alsa.opensrc.org/
@@ -58,7 +60,7 @@ PKGS=(
         'bluez'                 # Daemons for the bluetooth protocol stack
         'bluez-utils'           # Bluetooth development and debugging utilities
         'bluez-libs'            # Bluetooth libraries
-        'bluez-firmware'         # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
+        'bluez-firmware'        # Firmware for Broadcom BCM203x and STLC2300 Bluetooth chips
         'blueberry'             # Bluetooth configuration tool
         'pulseaudio-bluetooth'  # Bluetooth support for PulseAudio
 )
