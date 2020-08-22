@@ -46,7 +46,9 @@ PKGS=(
 
     # GENERAL UTILITIES ---------------------------------------------------
 
+    'fail2ban'              # Ban IP's after man failed login attempts
     'nautilus'              # Filesystem browser
+    'ufw'                   # Uncomplicated firewall
     'variety'               # Wallpaper changer
 
     # DEVELOPMENT ---------------------------------------------------------
