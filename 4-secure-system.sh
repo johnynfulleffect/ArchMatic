@@ -33,6 +33,6 @@ multi on
 EOF
 
 # --- Enable fail2ban
-cp jail.local /etc/fail2ban/
+curl https://github.com/johnynfulleffect/secure-linux/raw/master/jail.local -o /etc/fail2ban/jail.local
 systemctl enable fail2ban
 systemctl start fail2ban
