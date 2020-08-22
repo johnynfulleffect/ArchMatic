@@ -19,8 +19,8 @@ PKGS=(
 
     # TERMINAL UTILITIES --------------------------------------------------
 
-    'bash-completion'       # Tab completion for Bash
     'bleachbit'             # File deletion utility
+    'cmatrix'               # The Matrix screen animation
     'cronie'                # cron jobs
     'curl'                  # Remote content retrieval
     'file-roller'           # Archive utility
@@ -68,6 +68,7 @@ PKGS=(
     # MEDIA ---------------------------------------------------------------
 
     'celluloid'             # Video player
+    'feh'                   # Image viewer
 
     # PRODUCTIVITY --------------------------------------------------------
 
