@@ -20,7 +20,7 @@ PKGS=(
         'xorg-server'           # XOrg server
         'xorg-apps'             # XOrg apps group
         'xorg-xinit'            # XOrg init
-        'xorg-xinput'           # Xorg xinput
+        'xorg-xinput'           # XOrg xinput
         'mesa'                  # Open source version of OpenGL
         'xf86-video-amdgpu'     # XOrg amdgpu video driver
 
