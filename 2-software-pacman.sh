@@ -50,6 +50,7 @@ PKGS=(
     'nautilus'              # Filesystem browser
     'ufw'                   # Uncomplicated firewall
     'variety'               # Wallpaper changer
+    'openvpn'               # VPN client
 
     # DEVELOPMENT ---------------------------------------------------------
 
