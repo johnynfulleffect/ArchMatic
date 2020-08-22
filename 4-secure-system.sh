@@ -33,6 +33,6 @@ multi on
 EOF
 
 # --- Enable fail2ban
-cp fail2ban.local /etc/fail2ban/
+cp jail.local /etc/fail2ban/
 systemctl enable fail2ban
 systemctl start fail2ban
