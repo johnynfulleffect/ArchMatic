@@ -50,6 +50,7 @@ PKGS=(
 
     'nautilus'              # Filesystem browser
     'variety'               # Wallpaper changer
+    'clamav'                # Anti-virus
 
     # DEVELOPMENT ---------------------------------------------------------
 
