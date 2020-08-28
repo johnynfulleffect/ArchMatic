@@ -25,6 +25,7 @@ PKGS=(
     # UTILITIES -----------------------------------------------------------
 
     'i3lock-fancy'              # Screen locker
+    'timeshift'                 # Backup and Restore
 
     # COMMUNICATIONS ------------------------------------------------------
 
